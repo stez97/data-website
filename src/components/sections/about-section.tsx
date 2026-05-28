@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { dacatImages } from "@/data/assets";
+import { homeContent } from "@/data/content";
 import { MotionPanel } from "@/components/ui/motion-panel";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -9,29 +11,28 @@ export function AboutSection() {
         <MotionPanel>
           <SectionHeading
             eyebrow="Empresa"
-            title="Soluciones de cobre para el mercado HVAC/R y de refrigeración en América Latina."
-            copy="Gracias a una logística eficiente y a un enfoque orientado al cliente, brindamos soporte a distribuidores, instaladores y empresas mediante un servicio profesional y cercano."
+            title={homeContent.companyTitle}
+            copy={homeContent.companyParagraphs[0]}
           />
-          <p className="mt-6 text-base leading-8 text-graphite/78 md:text-lg">
-            Nuestro compromiso es construir relaciones comerciales sólidas basadas en
-            confianza, seriedad y atención personalizada. DACAT nace con una visión
-            internacional y con la misión de convertirse en un referente en soluciones de
-            cobre para el mercado HVAC/R y de refrigeración en América Latina.
-          </p>
+          {homeContent.companyParagraphs.slice(1).map((paragraph) => (
+            <p key={paragraph} className="mt-6 text-base leading-8 text-graphite/78 md:text-lg">
+              {paragraph}
+            </p>
+          ))}
         </MotionPanel>
         <MotionPanel delay={0.12} className="grid grid-cols-2 gap-4">
           <div className="relative min-h-[360px] overflow-hidden rounded-sm shadow-premium">
             <Image
-              src="/images/dacat/workshop-detail.jpg"
-              alt="Instalaciones DACAT"
+              src={dacatImages.about.src}
+              alt={dacatImages.about.alt}
               fill
               className="object-cover"
             />
           </div>
           <div className="relative mt-12 min-h-[360px] overflow-hidden rounded-sm">
             <Image
-              src="/images/dacat/hero-workshop.jpg"
-              alt="Produccion DACAT"
+              src={dacatImages.contact.src}
+              alt={dacatImages.contact.alt}
               fill
               className="object-cover"
             />

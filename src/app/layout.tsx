@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { homeContent } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "DACAT S.A. | Tubería de cobre para HVAC/R",
-  description:
-    "DACAT S.A. desarrolla soluciones profesionales en tubería de cobre para HVAC/R, refrigeración, aire acondicionado, agua sanitaria y gases médicos.",
+  title: "DACAT s.a. | Descubre el futuro de la tubería de cobre",
+  description: homeContent.companyParagraphs[0],
   metadataBase: new URL("https://www.dacat-sa.com"),
 };
 

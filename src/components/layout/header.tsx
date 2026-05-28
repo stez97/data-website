@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Menu } from "lucide-react";
-import { navItems } from "@/data/site";
+import { dacatImages } from "@/data/assets";
+import { navigation } from "@/data/navigation";
 
 export function Header() {
   return (
@@ -8,8 +9,8 @@ export function Header() {
       <div className="container-page flex h-20 items-center justify-between gap-6">
         <a href="#inicio" className="flex items-center">
           <Image
-            src="/images/dacat/logo-payoff.png"
-            alt="DACAT S.A."
+            src={dacatImages.logo.src}
+            alt={dacatImages.logo.alt}
             width={178}
             height={72}
             priority
@@ -17,18 +18,12 @@ export function Header() {
           />
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-graphite md:flex">
-          {navItems.map((item) => (
+          {navigation.map((item) => (
             <a key={item.href} href={item.href} className="transition hover:text-copper">
               {item.label}
             </a>
           ))}
         </nav>
-        <a
-          href="#contactos"
-          className="hidden h-11 items-center justify-center rounded-sm bg-ocean px-5 text-sm font-semibold text-white transition hover:bg-copper md:flex"
-        >
-          Contactar
-        </a>
         <button
           className="flex h-11 w-11 items-center justify-center rounded-sm border border-ink/10 text-ink md:hidden"
           aria-label="Abrir menu"

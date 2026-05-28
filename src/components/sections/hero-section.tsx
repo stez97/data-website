@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { ArrowRight, Gauge, ShieldCheck } from "lucide-react";
-import { markets } from "@/data/site";
+import { dacatImages } from "@/data/assets";
+import { homeContent } from "@/data/content";
 import { MotionPanel } from "@/components/ui/motion-panel";
 
 export function HeroSection() {
+  const intro = homeContent.companyParagraphs[0];
+
   return (
     <section id="inicio" className="relative min-h-[92vh] overflow-hidden bg-ink pt-20 text-white">
       <Image
-        src="/images/dacat/hero-workshop.jpg"
-        alt="Produccion DACAT"
+        src={dacatImages.hero.src}
+        alt={dacatImages.hero.alt}
         fill
         priority
         className="object-cover opacity-58"
@@ -20,11 +23,10 @@ export function HeroSection() {
             DACAT S.A.
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] md:text-7xl lg:text-8xl">
-            Descubre el futuro de la tubería de cobre
+            {homeContent.heroTitle}
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
-            Soluciones profesionales para HVAC/R, refrigeración, aire acondicionado,
-            agua sanitaria y gases médicos.
+            {intro}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
@@ -53,12 +55,8 @@ export function HeroSection() {
             <Gauge className="text-steel" />
             <span className="text-sm font-medium text-white/82">Rendimiento profesional</span>
           </div>
-          <div className="flex flex-wrap items-center gap-2 p-5">
-            {markets.map((market) => (
-              <span key={market} className="rounded-sm bg-white/12 px-3 py-2 text-xs text-white/80">
-                {market}
-              </span>
-            ))}
+          <div className="p-5 text-sm leading-7 text-white/78">
+            Productos fabricados bajo estrictos estándares internacionales ASTM y EN.
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { contact, navItems } from "@/data/site";
+import { dacatImages } from "@/data/assets";
+import { contact } from "@/data/contact";
+import { homeContent } from "@/data/content";
+import { navigation } from "@/data/navigation";
 
 export function Footer() {
   return (
@@ -8,14 +11,14 @@ export function Footer() {
       <div className="container-page grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <Image
-            src="/images/dacat/logo-payoff.png"
-            alt="DACAT S.A."
+            src={dacatImages.logo.src}
+            alt={dacatImages.logo.alt}
             width={190}
             height={76}
             className="h-14 w-auto brightness-0 invert"
           />
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/68">
-            Descubre el futuro de la tubería de cobre.
+            {homeContent.heroTitle}.
           </p>
         </div>
         <div>
@@ -23,7 +26,7 @@ export function Footer() {
             Navegación
           </p>
           <div className="grid gap-3 text-sm text-white/74">
-            {navItems.map((item) => (
+            {navigation.map((item) => (
               <a key={item.href} href={item.href} className="transition hover:text-white">
                 {item.label}
               </a>
@@ -38,9 +41,9 @@ export function Footer() {
             <p className="flex gap-3">
               <MapPin size={18} className="mt-1 shrink-0 text-copper" />
               <span>
-                {contact.addressLine1}
+                {contact.addressLines[0]}
                 <br />
-                {contact.addressLine2}
+                {contact.addressLines[1]}
               </span>
             </p>
             <a className="flex gap-3 transition hover:text-white" href={contact.phoneHref}>
@@ -55,7 +58,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container-page mt-10 border-t border-white/12 pt-6 text-sm text-white/50">
-        Copyright 2026 DACAT s.a.
+        {homeContent.footerCopyright}
       </div>
     </footer>
   );

@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { contact } from "@/data/site";
+import { contact } from "@/data/contact";
 import { MotionPanel } from "@/components/ui/motion-panel";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -10,16 +10,15 @@ export function ContactSection() {
         <MotionPanel>
           <SectionHeading
             eyebrow="Contactos"
-            title="Hablemos de la solución adecuada para su proyecto."
-            copy="El formulario es estático para este prototipo frontend."
+            title="Contactos"
           />
           <div className="mt-10 grid gap-5">
             <p className="flex gap-4 rounded-sm border border-ink/10 p-5 text-graphite">
               <MapPin className="mt-1 shrink-0 text-copper" />
               <span>
-                {contact.addressLine1}
+                {contact.addressLines[0]}
                 <br />
-                {contact.addressLine2}
+                {contact.addressLines[1]}
               </span>
             </p>
             <a
