@@ -1,8 +1,10 @@
 export const products = [
   {
+    slug: "condy",
     name: "CONDY",
     fullName: "DACAT CONDY",
-    href: "https://www.dacat-sa.com/condy/",
+    href: "/productos/condy",
+    sourceHref: "https://www.dacat-sa.com/condy/",
     image: {
       src: "/images/dacat/condy.webp",
       alt: "Producto DACAT CONDY, tubería de cobre preaislada",
@@ -12,9 +14,11 @@ export const products = [
       "DACAT CONDY es una tubería de cobre preaislada diseñada para aplicaciones de aire acondicionado, refrigeración y sistemas HVAC/R. Gracias a su aislamiento extruido directamente sobre el cobre, ofrece una excelente adherencia, mayor durabilidad y una protección superior contra condensación, humedad y desgaste mecánico. Fabricada con cobre de alta calidad conforme a estándares internacionales, DACAT CONDY garantiza eficiencia, confiabilidad y facilidad de instalación tanto en aplicaciones residenciales como comerciales. Su diseño profesional permite optimizar tiempos de montaje y asegurar un rendimiento constante incluso en instalaciones exigentes.",
   },
   {
+    slug: "condy-duo",
     name: "CONDY DUO",
     fullName: "DACAT CONDY DUO",
-    href: "https://www.dacat-sa.com/dacat-condy-duo/",
+    href: "/productos/condy-duo",
+    sourceHref: "https://www.dacat-sa.com/dacat-condy-duo/",
     image: {
       src: "/images/dacat/condy-duo.webp",
       alt: "Producto DACAT CONDY DUO, tubería de cobre preaislada doble",
@@ -24,9 +28,11 @@ export const products = [
       "DACAT CONDY DUO es una tubería de cobre preaislada doble, compuesta por dos tubos de cobre unidos en una sola solución práctica y profesional para sistemas de aire acondicionado y refrigeración. Diseñada especialmente para facilitar la conexión entre unidades internas y externas, permite una instalación más ordenada, rápida y eficiente. Gracias a su aislamiento extruido directamente sobre el cobre, ofrece excelente adherencia, alta resistencia y una protección superior contra condensación, humedad y desgaste mecánico. DACAT CONDY DUO combina calidad, durabilidad y facilidad de instalación, convirtiéndose en una solución ideal para aplicaciones HVAC/R residenciales y comerciales.",
   },
   {
+    slug: "condy-pro",
     name: "CONDY PRO",
     fullName: "DACAT CONDY PRO",
-    href: "https://www.dacat-sa.com/condy-pro/",
+    href: "/productos/condy-pro",
+    sourceHref: "https://www.dacat-sa.com/condy-pro/",
     image: {
       src: "/images/dacat/condy-pro.webp",
       alt: "Producto DACAT CONDY PRO, tubería de cobre preaislada de alto rendimiento",

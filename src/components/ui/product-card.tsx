@@ -49,8 +49,6 @@ export function ProductCard({
           </div>
           <a
             href={href}
-            target="_blank"
-            rel="noreferrer"
             aria-label={`Abrir ${name}`}
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-white/14 text-white transition duration-300 group-hover:border-copper group-hover:bg-copper"
           >
@@ -67,8 +65,6 @@ export function ProductCard({
         <p className="line-clamp-[10] text-sm leading-7 text-white/68">{description}</p>
         <Button
           href={href}
-          target="_blank"
-          rel="noreferrer"
           variant="light"
           className="mt-7 w-full"
           icon={<ArrowUpRight size={17} />}
