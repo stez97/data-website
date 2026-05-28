@@ -4,11 +4,12 @@ import { dacatImages } from "@/data/assets";
 import { contact } from "@/data/contact";
 import { homeContent } from "@/data/content";
 import { navigation } from "@/data/navigation";
+import { Container } from "@/components/ui/container";
 
 export function Footer() {
   return (
     <footer className="bg-ink py-12 text-white">
-      <div className="container-page grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+      <Container className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <Image
             src={dacatImages.logo.src}
@@ -56,10 +57,10 @@ export function Footer() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="container-page mt-10 border-t border-white/12 pt-6 text-sm text-white/50">
+      </Container>
+      <Container className="mt-10 border-t border-white/12 pt-6 text-sm text-white/50">
         {homeContent.footerCopyright}
-      </div>
+      </Container>
     </footer>
   );
 }

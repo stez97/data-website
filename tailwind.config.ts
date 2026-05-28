@@ -12,10 +12,13 @@ const config: Config = {
         ink: "#111827",
         graphite: "#27313d",
         copper: "#b46b43",
+        "copper-light": "#d59a72",
         ocean: "#032253",
+        "ocean-2": "#071a32",
         mist: "#f4f7f8",
         steel: "#77a5c4",
-        sage: "#7c8f79"
+        cyan: "#52c7da",
+        sage: "#7c8f79",
       },
       fontFamily: {
         sans: [
@@ -31,6 +34,11 @@ const config: Config = {
       },
       boxShadow: {
         premium: "0 24px 70px rgba(17, 24, 39, 0.18)",
+        glass: "0 20px 80px rgba(3, 34, 83, 0.18)",
+      },
+      backgroundImage: {
+        "technical-grid":
+          "linear-gradient(rgba(119,165,196,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(119,165,196,0.12) 1px, transparent 1px)",
       },
     },
   },

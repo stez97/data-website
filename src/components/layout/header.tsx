@@ -2,11 +2,12 @@ import Image from "next/image";
 import { Menu } from "lucide-react";
 import { dacatImages } from "@/data/assets";
 import { navigation } from "@/data/navigation";
+import { Container } from "@/components/ui/container";
 
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-white/82 backdrop-blur-xl">
-      <div className="container-page flex h-20 items-center justify-between gap-6">
+      <Container className="flex h-20 items-center justify-between gap-6">
         <a href="#inicio" className="flex items-center">
           <Image
             src={dacatImages.logo.src}
@@ -26,12 +27,12 @@ export function Header() {
         </nav>
         <button
           className="flex h-11 w-11 items-center justify-center rounded-sm border border-ink/10 text-ink md:hidden"
-          aria-label="Abrir menu"
+          aria-label="Abrir menú"
           title="Abrir menú"
         >
           <Menu size={20} />
         </button>
-      </div>
+      </Container>
     </header>
   );
 }

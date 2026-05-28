@@ -1,15 +1,16 @@
 import Image from "next/image";
 import { dacatImages } from "@/data/assets";
 import { homeContent } from "@/data/content";
-import { MotionPanel } from "@/components/ui/motion-panel";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { Container } from "@/components/ui/container";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export function AboutSection() {
   return (
     <section id="empresa" className="bg-white py-20 md:py-28">
-      <div className="container-page grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <MotionPanel>
-          <SectionHeading
+      <Container className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <Reveal>
+          <SectionHeader
             eyebrow="Empresa"
             title={homeContent.companyTitle}
             copy={homeContent.companyParagraphs[0]}
@@ -19,9 +20,10 @@ export function AboutSection() {
               {paragraph}
             </p>
           ))}
-        </MotionPanel>
-        <MotionPanel delay={0.12} className="grid grid-cols-2 gap-4">
+        </Reveal>
+        <Reveal delay={0.12} className="grid grid-cols-2 gap-4">
           <div className="relative min-h-[360px] overflow-hidden rounded-sm shadow-premium">
+            <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,transparent,rgba(3,34,83,0.18))]" />
             <Image
               src={dacatImages.about.src}
               alt={dacatImages.about.alt}
@@ -30,6 +32,7 @@ export function AboutSection() {
             />
           </div>
           <div className="relative mt-12 min-h-[360px] overflow-hidden rounded-sm">
+            <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,transparent,rgba(180,107,67,0.16))]" />
             <Image
               src={dacatImages.contact.src}
               alt={dacatImages.contact.alt}
@@ -37,8 +40,8 @@ export function AboutSection() {
               className="object-cover"
             />
           </div>
-        </MotionPanel>
-      </div>
+        </Reveal>
+      </Container>
     </section>
   );
 }
