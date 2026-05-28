@@ -24,8 +24,8 @@ export function AboutSection() {
             <Badge>Gases medicinales</Badge>
           </div>
         </Reveal>
-        <Reveal delay={0.12} className="grid grid-cols-2 gap-4">
-          <div className="relative min-h-[420px] overflow-hidden rounded-sm shadow-premium">
+        <Reveal delay={0.12} className="grid gap-4 sm:grid-cols-2">
+          <div className="relative min-h-[320px] overflow-hidden rounded-sm shadow-premium md:min-h-[420px]">
             <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,transparent,rgba(3,34,83,0.18))]" />
             <Image
               src={dacatImages.about.src}
@@ -34,7 +34,7 @@ export function AboutSection() {
               className="object-cover"
             />
           </div>
-          <div className="relative mt-12 min-h-[420px] overflow-hidden rounded-sm">
+          <div className="relative min-h-[320px] overflow-hidden rounded-sm sm:mt-12 md:min-h-[420px]">
             <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,transparent,rgba(180,107,67,0.16))]" />
             <Image
               src={dacatImages.contact.src}

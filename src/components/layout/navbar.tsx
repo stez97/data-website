@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { dacatImages } from "@/data/assets";
 import { contact } from "@/data/contact";
@@ -18,7 +19,7 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/12 bg-ocean-2/78 text-white backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between gap-6">
-        <a href="#inicio" className="flex items-center gap-3" onClick={() => setIsMobileOpen(false)}>
+        <Link href="/#inicio" className="flex items-center gap-3" onClick={() => setIsMobileOpen(false)}>
           <Image
             src={dacatImages.logo.src}
             alt={dacatImages.logo.alt}
@@ -28,7 +29,7 @@ export function Navbar() {
             className="hidden h-11 w-auto brightness-0 invert sm:block"
           />
           <span className="text-base font-semibold tracking-[0.18em] sm:hidden">DACAT S.A.</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-1 text-sm font-medium lg:flex" aria-label="Navegación principal">
           {navigation.map((item) =>
@@ -41,7 +42,7 @@ export function Navbar() {
                   {item.label}
                   <ChevronDown size={16} className="transition group-hover:rotate-180" />
                 </a>
-                <div className="invisible absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100">
+                <div className="invisible absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="grid grid-cols-3 gap-3 rounded-sm border border-white/14 bg-ocean-2/94 p-3 shadow-glass backdrop-blur-xl">
                     {products.map((product) => (
                       <a
@@ -51,7 +52,7 @@ export function Navbar() {
                       >
                         <span className="block text-sm font-semibold text-white">{product.name}</span>
                         <span className="mt-3 block h-px w-8 bg-copper transition group-hover/card:w-14" />
-                        <span className="mt-3 line-clamp-3 block text-xs leading-5 text-white/62">
+                        <span className="mt-3 line-clamp-3 block text-xs leading-5 text-white/70">
                           {product.description}
                         </span>
                       </a>

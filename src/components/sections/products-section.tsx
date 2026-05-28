@@ -17,7 +17,6 @@ export function ProductsSection() {
           <SectionHeader
             eyebrow="Productos"
             title={homeContent.productsTitle}
-            copy="Productos DACAT preservados desde el sitio actual: CONDY, CONDY DUO y CONDY PRO."
             inverted
           />
         </Reveal>
