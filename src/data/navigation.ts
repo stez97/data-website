@@ -1,5 +1,5 @@
 export const navigation = [
-  { label: "Home", href: "#inicio", sourceHref: "https://www.dacat-sa.com" },
+  { label: "Inicio", href: "#inicio", sourceHref: "https://www.dacat-sa.com" },
   {
     label: "Productos",
     href: "#productos",
